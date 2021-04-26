@@ -1,0 +1,20 @@
+{% extends "layouts.html" %} {% block title %}Notice{% endblock %} {% block content %} {% load static %}
+<div class="tm-blog-img-container">
+</div>
+
+<section class="tm-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="botice_board">
+                {% for in %} {% endfor %}
+                <h3>{{Notice.title}}</h3>
+                <img src="url({{Notice.image.url}})" class="img-fluid" alt="">
+                <p>{{Notice.description}}</p>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

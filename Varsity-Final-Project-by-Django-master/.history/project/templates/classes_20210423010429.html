@@ -1,0 +1,18 @@
+{% extends "layouts.html" %} {% block title %}Classes{% endblock %} {% block content %} {% load static %}
+<div class="tm-blog-img-container">
+</div>
+
+<section class="tm-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="our_classes">
+                <h3>{{b.title}}</h3>
+                <img src="{{ b.image.url }}" class="img-fluid" alt="">
+                <a href="{{ n.pdf.url }}">Download</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

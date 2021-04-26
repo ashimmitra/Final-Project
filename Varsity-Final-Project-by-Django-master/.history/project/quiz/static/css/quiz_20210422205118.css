@@ -1,0 +1,34 @@
+.col-md-12 .quiz_section {
+    padding: 50px;
+}
+
+.mcq_questions .ca {}
+
+input[type='submit'] {
+    width: 60%;
+    background: #f06226;
+    border: 0;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+input[type='radio'] {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+}
+
+#results h3 {
+    background: #aff0b2;
+    color: #050808;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#results span {
+    color: red;
+    font-weight: bold;
+}

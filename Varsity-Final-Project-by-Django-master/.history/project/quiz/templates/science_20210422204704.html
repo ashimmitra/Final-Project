@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <title>Science Exam</title>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 quiz">
+                <a href="/"><button type="button" class="btn btn-outline-success btn-sm">Go Back</button></a>
+                <h2 class="text-center">Objective test Question</h2>
+
+                <div class="mcq_questions card">
+                    <div id="results"></div>
+                    <form name="quizForm" onsubmit="return submitAnswers(answers = [{% for q in questions %}'{{ q.answer }}',{% endfor %}])">
+                        {% for q in questions %}
+                        <h3> {{ q.id }}. {{ q.question }}</h3>
+                        <input type="radio" name="q{{ q.id }}" value="a" id="q1a"> a. {{ q.option1 }}<br><br>
+                        <input type="radio" name="q{{ q.id }}" value="b" id="q1b"> b. {{ q.option2 }}<br><br>
+                        <input type="radio" name="q{{ q.id }}" value="c" id="q1c"> c. {{ q.option3 }}<br><br>
+                        <input type="radio" name="q{{ q.id }}" value="d" id="q1d"> d. {{ q.option4 }}<br><br> {% endfor %}
+
+                        <br><br>
+                        <a href="/quiz/result/"><button type="button " class="btn btn-outline-success btn-lg">Submit Answer</button></a>
+                    </form>
+                    <br><br>
+                    <a href="/quiz/english/"><button type="button " class="btn btn-outline-success btn-lg">Reset</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
